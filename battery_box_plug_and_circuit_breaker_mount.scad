@@ -39,3 +39,12 @@ union() {
     
 }
 
+// Trial Print 1 Notes
+// Add mounting holes for screws to go into the bottom face
+// Face is shorter than the other part by about 3mm
+// receptacleMountingRingInsetDia is about 2mm too small (maybe forgot to add a tolerance var??)
+// receptacleInnerDia is about 2mm too small (tolerance again??)
+// Front Face prints against bed.  Corners are sloppy/shrunken.  Maybe curve them.
+// Assembly: Unless the wires can be pushed through the other part as the parts are
+//      moved together, assembly will be difficult/impossible because there isn't
+//      room for excess wire.

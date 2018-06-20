@@ -167,3 +167,11 @@ module circuitBreakerMountPlate() {
                 cylinder(d=circuitBreakerScrewHoleDia, h=circuitBreakerScrewHoleDepth+overlap*2);
         }
 }
+
+// Trial Print 1 Notes
+// Hole to circuit breaker needs to be large enough for the terminal ring to pass through.
+// Face is taller than the other part by about 3mm
+// Transition from bottom of cutout to bottom of wireThruHole could be smooth
+//     by cutting across it (semi-cylinder)
+// Add mounting holes for screws to go into the bottom face
+
