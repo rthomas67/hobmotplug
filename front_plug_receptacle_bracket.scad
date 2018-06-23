@@ -3,9 +3,6 @@ include <front_plug_common.scad>
 receptacleFaceplateWidth=77;
 receptacleFaceplateHeight=57;
 receptacleFaceplateThickness=5;
-receptacleFaceplateScrewCenterWidth=64;
-receptacleFaceplateScrewHoleDia=3.5;
-receptacleFaceplateScrewDepth=8;
 receptacleFaceplateCornerRadius=11;
 
 motorMountHoleCenterWidth=76;
@@ -83,24 +80,6 @@ module bracketBody() {
         translate([0,receptacleOuterDia/2,mountingPlateThickness]) 
             cylinder(d=receptacleMountingRingInsetDia+2*receptacleMountingRingClearance, 
                 h=receptacleBracketLength-mountingPlateThickness+overlap);
-        // Left Bolt thru-hole
-//        translate([-motorMountHoleCenterWidth/2,-overlap,motorMountBoltInsetFromFace])
-//            rotate([-90,0,0])
-//                cylinder(d=motorMountBoltShaftDia, h=receptacleOuterDia+overlap*2);
-        // Left head inset
-//        translate([-motorMountHoleCenterWidth/2,
-//                motorMountBoltShaftThruLength,motorMountBoltInsetFromFace])
-//            rotate([-90,0,0])
-//                cylinder(d=motorMountBoltHeadInsetDia, h=receptacleOuterDia+overlap*2);
-        // Right Bolt thru-hole
-//        translate([motorMountHoleCenterWidth/2,-overlap,motorMountBoltInsetFromFace])
-//            rotate([-90,0,0])
-//                cylinder(d=motorMountBoltShaftDia, h=receptacleOuterDia+overlap*2);
-        // Right head inset
-//        translate([motorMountHoleCenterWidth/2,
-//                motorMountBoltShaftThruLength,motorMountBoltInsetFromFace])
-//            rotate([-90,0,0])
-//                cylinder(d=motorMountBoltHeadInsetDia, h=receptacleOuterDia+overlap*2);
         // Left faceplate screw hole
         translate([-receptacleFaceplateScrewCenterWidth/2,
                 faceplateBottomOffset+receptacleFaceplateHeight/2,-overlap])
