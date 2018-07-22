@@ -13,6 +13,9 @@ interiorTolerance=2;
 $fn=50;
 overlap=0.001;
 
+*color([1,0,0,0.4])
+    import("battery_box_plug_and_circuit_breaker_mount.stl");
+
 union() {
     difference() {
             hull() {
