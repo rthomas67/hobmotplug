@@ -1,4 +1,4 @@
-renderHood=true;
+renderHood=false;
 renderBottomPlate=!renderHood;
 
 bezelInsertionWidth=85;
@@ -21,7 +21,7 @@ wireTunnelInsetFromRear=14;
 baseAngle=20;
 hoodAngle=50;
 
-hoodDepth=45; // mm out on the top side.
+hoodDepth=47; // mm out on the top side.
 hoodThickness=3;
 
 // riser leaves room to maneuver the part in from the front
@@ -47,12 +47,12 @@ attachmentTabWidth=8;
 $fn=50;
 
 attachmentLegWidth=24;
-attachmentLegLength=40;
+attachmentLegLength=48;
 attachmentLegThickness=20;
 attachmentCornerRoundnessDia=3;
 attachmentEndTaperInset=6;
 screwHoleDia=4;
-attachmentLegSeparation=60;
+attachmentLegSeparation=57;
 
 bezelFaceWidthCenter=bezelFaceWidth/2;
 
@@ -198,7 +198,32 @@ module bottomPlate() {
                     bottomPlateLength-bottomPlateScrewHoleInset,0]) {
                 countersunkScrewHole(bottomPlateScrewHoleDia, bottomPlateThickness);
             }
-
+            
+            // screw holes on edge for additional mount strength
+            translate([bezelFaceWidth*1/8,
+                    -overlap,
+                    bottomPlateThickness/2]) {
+                        rotate([-90,0,0])
+                countersunkScrewHole(bottomPlateScrewHoleDia*2/3, bottomPlateThickness+overlap);
+            }
+            translate([bezelFaceWidth*2/8,
+                    -overlap,
+                    bottomPlateThickness/2]) {
+                        rotate([-90,0,0])
+                countersunkScrewHole(bottomPlateScrewHoleDia*2/3, bottomPlateThickness+overlap);
+            }
+            translate([bezelFaceWidth*6/8,
+                    -overlap,
+                    bottomPlateThickness/2]) {
+                        rotate([-90,0,0])
+                countersunkScrewHole(bottomPlateScrewHoleDia*2/3, bottomPlateThickness+overlap);
+            }
+            translate([bezelFaceWidth*7/8,
+                    -overlap,
+                    bottomPlateThickness/2]) {
+                        rotate([-90,0,0])
+                countersunkScrewHole(bottomPlateScrewHoleDia*2/3, bottomPlateThickness+overlap);
+            }
         }
 }
     
